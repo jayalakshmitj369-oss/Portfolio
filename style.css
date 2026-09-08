@@ -158,7 +158,135 @@ p {
 
 
 /* ================= HERO ================= */
- .hero { min-height: 680px; display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 50px; } .eyebrow { color: var(--dark-green); font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; } .hero h1 { margin: 15px 0 25px; font-size: clamp(45px, 6vw, 78px); line-height: 1.02; letter-spacing: -3px; } .hero h1 em { color: var(--dark-green); font-style: normal; } .hero-description { max-width: 560px; font-size: 16px; } .hero-buttons { display: flex; gap: 12px; margin-top: 30px; } .btn { padding: 13px 21px; border-radius: 30px; font-size: 13px; font-weight: 800; border: 1px solid var(--text); } .primary-btn { color: white; background: var(--text); } .secondary-btn { background: white; } /* ================= HERO IMAGE ================= */ .hero-image { height: 460px; position: relative; display: grid; place-items: center; } .hero-blob { position: absolute; width: 360px; height: 390px; background: #d9dfd7; border-radius: 55% 45% 50% 50%; transform: rotate(10deg); } .designer-image { z-index: 1; width: 240px; height: 320px; border-radius: 120px 120px 30px 30px; display: grid; place-items: center; font-size: 70px; color: white; background: linear-gradient( 145deg, #e7c5ae, #b77961 ); box-shadow: 0 25px 50px #0001; } .floating-card { position: absolute; z-index: 2; padding: 9px 15px; background: white; border-radius: 30px; font-size: 11px; font-weight: 800; box-shadow: 0 12px 30px #0001; } .card-one { top: 75px; left: 5%; } .card-two { top: 145px; right: 5%; } .card-three { bottom: 70px; left: 15%; }
+
+.hero {
+    min-height: 680px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.eyebrow {
+    color: var(--dark-green);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 15px 0 25px;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 em {
+    color: var(--dark-green);
+
+    font-style: normal;
+}
+
+.hero-description {
+    max-width: 560px;
+
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 13px 21px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    border: 1px solid var(--text);
+}
+
+.primary-btn {
+    color: white;
+
+    background: var(--text);
+}
+
+.secondary-btn {
+    background: white;
+}
+
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image {
+    height: 460px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+}
+
+.hero-blob {
+    position: absolute;
+
+    width: 360px;
+
+    height: 390px;
+
+    background: #d9dfd7;
+
+    border-radius: 55% 45% 50% 50%;
+
+    transform: rotate(10deg);
+}
+
+.designer-image {
+    z-index: 1;
+
+    width: 240px;
+
+    height: 320px;
+
+    border-radius: 120px 120px 30px 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 70px;
+
+    color: white;
+
+    background: linear-gradient(
+        145deg,
+        #e7c5ae,
+        #b77961
+    );
+
+    box-shadow: 0 25px 50px #0001;
+}
 
 
 /* ================= FLOATING HERO CARDS ================= */
@@ -256,18 +384,16 @@ p {
 }
 
 
-/* ABOUT IMAGE */
+/* ABOUT IMAGE - NORMAL ROUND SIZE */
 
 .about-image {
-    width: 100%;
+    width: 300px;
 
-    max-width: 380px;
-
-    height: 450px;
+    height: 300px;
 
     margin: 0 auto;
 
-    border-radius: 24px;
+    border-radius: 50%;
 
     overflow: hidden;
 
@@ -278,6 +404,7 @@ p {
 
 .about-image img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -333,11 +460,13 @@ p {
 
 .service-icon {
     width: 55px;
+
     height: 55px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: white;
@@ -567,6 +696,7 @@ p {
 
 .phone {
     width: 145px;
+
     height: 290px;
 
     padding: 5px;
@@ -656,6 +786,7 @@ p {
 
 .small-phone {
     width: 125px;
+
     height: 250px;
 
     padding: 5px;
@@ -673,6 +804,7 @@ p {
 
 .small-phone img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -730,6 +862,7 @@ p {
 
 .mock-phone {
     width: 230px;
+
     height: 410px;
 
     margin: auto;
@@ -768,6 +901,7 @@ p {
 .mock-phone.reminder img,
 .mock-phone.profile img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -845,6 +979,7 @@ p {
 
 .profile-avatar {
     width: 55px;
+
     height: 55px;
 
     margin: 0 auto 12px;
@@ -988,6 +1123,7 @@ p {
     display: inline-block;
 
     width: 7px;
+
     height: 7px;
 
     margin-right: 4px;
@@ -1198,11 +1334,13 @@ footer {
 
 .contact-icon {
     width: 34px;
+
     height: 34px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: white;
@@ -1280,6 +1418,7 @@ footer {
         top: 70px;
 
         left: 0;
+
         right: 0;
 
         display: flex;
@@ -1347,10 +1486,16 @@ footer {
         max-width: 100%;
     }
 
-    .about-image {
-        max-width: 350px;
+    /* ABOUT IMAGE - TABLET */
 
-        height: 420px;
+    .about-image {
+        width: 280px;
+
+        height: 280px;
+
+        max-width: none;
+
+        border-radius: 50%;
     }
 
 
@@ -1544,14 +1689,16 @@ footer {
         line-height: 1.7;
     }
 
+    /* ABOUT IMAGE - MOBILE */
+
     .about-image {
-        width: 100%;
+        width: 250px;
 
-        max-width: 300px;
+        height: 250px;
 
-        height: 360px;
+        max-width: none;
 
-        border-radius: 20px;
+        border-radius: 50%;
     }
 
 
