@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Jayalakshmi Jayakumar</title>
+
+    <!-- Manrope Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Your existing stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================
+           PROJECTS PAGE
+           ========================================= */
+
+        .projects-page {
+            min-height: 100vh;
+            padding: 150px 8% 100px;
+        }
+
+        .projects-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .projects-heading .pill {
+            display: inline-block;
+            padding: 8px 22px;
+            border-radius: 30px;
+            background: #dfe7e1;
+            color: #46534b;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .projects-heading h1 {
+            margin: 20px 0 12px;
+            font-size: 48px;
+            line-height: 1.15;
+            color: #222;
+        }
+
+        .projects-heading p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+
+        /* =========================================
+           PROJECT GRID
+           ========================================= */
+
+        .projects-grid {
+            max-width: 1150px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+
+        /* =========================================
+           PROJECT CARD
+           ========================================= */
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e2e6e3;
+            border-radius: 24px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
+        }
+
+
+        /* =========================================
+           PROJECT IMAGE
+           ========================================= */
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+
+            background: #edf1ee;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================================
+           PROJECT INFORMATION
+           ========================================= */
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-category {
+            margin: 0 0 10px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            color: #66736b;
+
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-content h2 {
+            margin: 0 0 14px;
+
+            font-size: 25px;
+            line-height: 1.3;
+
+            color: #222;
+        }
+
+        .project-description {
+            margin: 0 0 25px;
+
+            font-size: 15px;
+            line-height: 1.7;
+
+            color: #666;
+        }
+
+
+        /* =========================================
+           VIEW MY WORK BUTTON
+           ========================================= */
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 22px;
+
+            border-radius: 25px;
+
+            background: #5d6b63;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .view-project-btn:hover {
+            background: #46534b;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           ADD NEW PROJECT CARD
+           
+           You can copy any project-card and
+           change its content whenever you
+           create a new project.
+           ========================================= */
+
+        .add-project-note {
+            max-width: 1150px;
+            margin: 50px auto 0;
+
+            text-align: center;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            color: #777;
+        }
+
+
+        /* =========================================
+           BACK TO HOME
+           ========================================= */
+
+        .back-home {
+            display: block;
+
+            width: max-content;
+
+            margin: 45px auto 0;
+
+            color: #5d6b63;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           TABLET
+           ========================================= */
+
+        @media (max-width: 900px) {
+
+            .projects-page {
+                padding: 130px 6% 80px;
+            }
+
+            .projects-heading h1 {
+                font-size: 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                max-width: 650px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 600px) {
+
+            .projects-page {
+                padding: 110px 20px 60px;
+            }
+
+            .projects-heading {
+                margin-bottom: 40px;
+            }
+
+            .projects-heading h1 {
+                font-size: 32px;
+            }
+
+            .projects-heading p {
+                font-size: 14px;
+            }
+
+            .project-image {
+                height: 220px;
+            }
+
+            .project-content {
+                padding: 24px;
+            }
+
+            .project-content h2 {
+                font-size: 21px;
+            }
+
+            .project-description {
+                font-size: 14px;
+            }
+
+            .view-project-btn {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         NAVIGATION
+         ========================================= -->
+
+    <header class="navbar">
+
+        <a href="index.html#home" class="logo">
+            JAYALAKSHMI JAYAKUMAR<span></span>
+        </a>
+
+        <button class="menu-btn" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links">
+
+            <a href="index.html#home">Home</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="index.html#services">Services</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         PROJECTS PAGE
+         ========================================= -->
+
+    <main>
+
+        <section class="projects-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="projects-heading">
+
+                <span class="pill">
+                    MY PROJECTS
+                </span>
+
+                <h1>
+                    Explore My Work
+                </h1>
+
+                <p>
+                    A collection of my UI/UX design projects,
+                    including mobile applications and websites.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 PROJECT CARDS
+                 ===================================== -->
+
+            <div class="projects-grid">
+
+
+                <!-- =================================
+                     PROJECT 01
+                     FAMILY DIGITAL DOCUMENT WALLET
+                     ================================= -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="Androidapplogo.jpg"
+                            alt="Family Digital Document Wallet"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            Mobile App · UI/UX Design · Ongoing
+                        </p>
+
+                        <h2>
+                            Family Digital Document Wallet
+                        </h2>
+
+                        <p class="project-description">
+                            A family-focused mobile app designed to
+                            organize important digital documents,
+                            manage family members, and keep track
+                            of document expiry reminders in one place.
+                        </p>
+
+                        <a
+                            href="https://www.figma.com/proto/FunWPjvxJm2hHNM49Aekcq/Family-Document-Wallet---Jayalakshmi-Jayakumar?node-id=23-423&viewport=-617%2C139%2C0.28&t=AlQjpWvIzZGTZzFt-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=12%3A134&page-id=0%3A1"
+                            class="view-project-btn"
+                        >
+                            VIEW MY WORK →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     PROJECT 02
+                     JARTISTRY
+                     ================================= -->
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="Jartistrylogo.png"
+                            alt="JArtistry Website"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            Website · UI/UX Design · Ongoing
+                        </p>
+
+                        <h2>
+                            JArtistry
+                        </h2>
+
+                        <p class="project-description">
+                            A single-artist website designed to
+                            showcase artworks, encourage interaction,
+                            and allow visitors to request customized
+                            artworks such as Nettippattam and
+                            charcoal drawings.
+                        </p>
+
+                        <a
+                            href="https://www.figma.com/proto/IlQ2vbCDJcbfpvZ1kLFrNt/JArtistry---Jayalakshmi-Jayakumar?node-id=106-4&viewport=-390%2C171%2C0.31&t=gdw3s16t0A7lXQUw-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+                            class="view-project-btn"
+                        >
+                            VIEW MY WORK →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     ADD YOUR FUTURE PROJECT HERE
+
+                     COPY THE PROJECT CARD ABOVE
+                     AND CHANGE:
+                     1. Image
+                     2. Category
+                     3. Project name
+                     4. Description
+                     5. Project page link
+                     ================================= -->
+
+                <!--
+
+                <article class="project-card">
+
+                    <div class="project-image">
+
+                        <img
+                            src="your-new-project-image.jpg"
+                            alt="Your New Project"
+                        >
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p class="project-category">
+                            Website · UI/UX Design
+                        </p>
+
+                        <h2>
+                            Your New Project
+                        </h2>
+
+                        <p class="project-description">
+                            Add a short description of your
+                            new project here.
+                        </p>
+
+                        <a
+                            href="your-new-project.html"
+                            class="view-project-btn"
+                        >
+                            VIEW MY WORK →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                -->
+
+
+            </div>
+
+
+            <!-- FUTURE PROJECT NOTE -->
+
+            <p class="add-project-note">
+                More projects will be added as I continue
+                developing my UI/UX design skills.
+            </p>
+
+
+            <!-- BACK TO HOME -->
+
+            <a
+                href="index.html#home"
+                class="back-home"
+            >
+                ← Back to Home
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Your existing JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
