@@ -5,324 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projects | Jayalakshmi Jayakumar</title>
+    <title>Jayalakshmi Jayakumar | UI/UX Designer</title>
 
-    <!-- Manrope Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Your existing stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* =========================================
-           PROJECTS PAGE
-           ========================================= */
-
-        .projects-page {
-            min-height: 100vh;
-            padding: 150px 8% 100px;
-        }
-
-        .projects-heading {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .projects-heading .pill {
-            display: inline-block;
-            padding: 8px 22px;
-            border-radius: 30px;
-            background: #dfe7e1;
-            color: #46534b;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .projects-heading h1 {
-            margin: 20px 0 12px;
-            font-size: 48px;
-            line-height: 1.15;
-            color: #222;
-        }
-
-        .projects-heading p {
-            max-width: 650px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #666;
-        }
-
-
-        /* =========================================
-           PROJECT GRID
-           ========================================= */
-
-        .projects-grid {
-            max-width: 1150px;
-            margin: 0 auto;
-
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 35px;
-        }
-
-
-        /* =========================================
-           PROJECT CARD
-           ========================================= */
-
-        .project-card {
-            background: #ffffff;
-            border: 1px solid #e2e6e3;
-            border-radius: 24px;
-            overflow: hidden;
-
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.11);
-        }
-
-
-        /* =========================================
-           PROJECT IMAGE
-           ========================================= */
-
-        .project-image {
-            width: 100%;
-            height: 280px;
-
-            background: #edf1ee;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            display: block;
-
-            transition: transform 0.4s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.03);
-        }
-
-
-        /* =========================================
-           PROJECT INFORMATION
-           ========================================= */
-
-        .project-content {
-            padding: 30px;
-        }
-
-        .project-category {
-            margin: 0 0 10px;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            color: #66736b;
-
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-content h2 {
-            margin: 0 0 14px;
-
-            font-size: 25px;
-            line-height: 1.3;
-
-            color: #222;
-        }
-
-        .project-description {
-            margin: 0 0 25px;
-
-            font-size: 15px;
-            line-height: 1.7;
-
-            color: #666;
-        }
-
-
-        /* =========================================
-           VIEW MY WORK BUTTON
-           ========================================= */
-
-        .view-project-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 12px 22px;
-
-            border-radius: 25px;
-
-            background: #5d6b63;
-            color: #ffffff;
-
-            text-decoration: none;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            transition:
-                background 0.3s ease,
-                transform 0.3s ease;
-        }
-
-        .view-project-btn:hover {
-            background: #46534b;
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================================
-           ADD NEW PROJECT CARD
-           
-           You can copy any project-card and
-           change its content whenever you
-           create a new project.
-           ========================================= */
-
-        .add-project-note {
-            max-width: 1150px;
-            margin: 50px auto 0;
-
-            text-align: center;
-
-            font-size: 14px;
-            line-height: 1.6;
-
-            color: #777;
-        }
-
-
-        /* =========================================
-           BACK TO HOME
-           ========================================= */
-
-        .back-home {
-            display: block;
-
-            width: max-content;
-
-            margin: 45px auto 0;
-
-            color: #5d6b63;
-
-            text-decoration: none;
-
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .back-home:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================================
-           TABLET
-           ========================================= */
-
-        @media (max-width: 900px) {
-
-            .projects-page {
-                padding: 130px 6% 80px;
-            }
-
-            .projects-heading h1 {
-                font-size: 40px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                max-width: 650px;
-            }
-
-        }
-
-
-        /* =========================================
-           MOBILE
-           ========================================= */
-
-        @media (max-width: 600px) {
-
-            .projects-page {
-                padding: 110px 20px 60px;
-            }
-
-            .projects-heading {
-                margin-bottom: 40px;
-            }
-
-            .projects-heading h1 {
-                font-size: 32px;
-            }
-
-            .projects-heading p {
-                font-size: 14px;
-            }
-
-            .project-image {
-                height: 220px;
-            }
-
-            .project-content {
-                padding: 24px;
-            }
-
-            .project-content h2 {
-                font-size: 21px;
-            }
-
-            .project-description {
-                font-size: 14px;
-            }
-
-            .view-project-btn {
-                width: 100%;
-            }
-
-        }
-    </style>
 </head>
-
 
 <body>
 
-    <!-- =========================================
-         NAVIGATION
-         ========================================= -->
+    <!-- ================= NAVBAR ================= -->
 
     <header class="navbar">
 
-        <a href="index.html#home" class="logo">
+        <a href="#home" class="logo">
             JAYALAKSHMI JAYAKUMAR<span></span>
         </a>
 
@@ -332,275 +32,714 @@
 
         <nav class="nav-links">
 
-            <a href="index.html#home">Home</a>
+            <a href="#home">Home</a>
 
-            <a href="index.html#about">About</a>
+            <a href="#about">About</a>
 
-            <a href="index.html#services">Services</a>
+            <a href="#services">Services</a>
 
-            <a href="projects.html">Projects</a>
+            <a href="#projects">Projects</a>
 
-            <a href="index.html#contact">Contact</a>
+            <a href="#contact">Contact</a>
 
         </nav>
 
     </header>
 
 
-    <!-- =========================================
-         PROJECTS PAGE
-         ========================================= -->
-
     <main>
 
-        <section class="projects-page">
+   <!-- ================= HERO ================= -->
 
+        <section class="hero section" id="home">
 
-            <!-- PAGE HEADING -->
+            <div class="hero-content">
 
-            <div class="projects-heading">
-
-                <span class="pill">
-                    MY PROJECTS
-                </span>
-
-                <h1>
-                    Explore My Work
-                </h1>
-
-                <p>
-                    A collection of my UI/UX design projects,
-                    including mobile applications and websites.
+                <p class="eyebrow">
+                    Aspiring UI/UX Designer
                 </p>
 
-            </div>
-
-
-            <!-- =====================================
-                 PROJECT CARDS
-                 ===================================== -->
-
-            <div class="projects-grid">
-
-
-                <!-- =================================
-                     PROJECT 01
-                     FAMILY DIGITAL DOCUMENT WALLET
-                     ================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="Androidapplogo.jpg"
-                            alt="Family Digital Document Wallet"
-                        >
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Mobile App · UI/UX Design · Ongoing
-                        </p>
-
-                        <h2>
-                            Family Digital Document Wallet
-                        </h2>
-
-                        <p class="project-description">
-                            A family-focused mobile app designed to
-                            organize important digital documents,
-                            manage family members, and keep track
-                            of document expiry reminders in one place.
-                        </p>
-
-                        <a
-                            href="https://www.figma.com/proto/FunWPjvxJm2hHNM49Aekcq/Family-Document-Wallet---Jayalakshmi-Jayakumar?node-id=23-423&viewport=-617%2C139%2C0.28&t=AlQjpWvIzZGTZzFt-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=12%3A134&page-id=0%3A1"
-                            class="view-project-btn"
-                        >
-                            VIEW MY WORK →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- =================================
-                     PROJECT 02
-                     JARTISTRY
-                     ================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="Jartistrylogo.png"
-                            alt="JArtistry Website"
-                        >
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Website · UI/UX Design · Ongoing
-                        </p>
-
-                        <h2>
-                            JArtistry
-                        </h2>
-
-                        <p class="project-description">
-                            A single-artist website designed to
-                            showcase artworks, encourage interaction,
-                            and allow visitors to request customized
-                            artworks such as Nettippattam and
-                            charcoal drawings.
-                        </p>
-
-                        <a
-                            href="https://www.figma.com/proto/IlQ2vbCDJcbfpvZ1kLFrNt/JArtistry---Jayalakshmi-Jayakumar?node-id=106-4&viewport=-390%2C171%2C0.31&t=gdw3s16t0A7lXQUw-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
-                            class="view-project-btn"
-                        >
-                            VIEW MY WORK →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                    <!-- =================================
-                     PROJECT 03
-                     KERALA ROOTS
-                     ================================= -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="keralaroots.jpg"
-                            alt="KeralaRoots Website"
-                        >
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Website · HTML,CSS,Bootstrap
-                        </p>
-
-                        <h2>
-                            KERALA ROOTS
-                        </h2>
-
-                        <p class="project-description">
-                            Kerala Roots is a responsive e-commerce website concept designed to showcase and sell authentic Kerala products. The website provides an organized and visually engaging shopping experience, allowing users to explore products through categories, districts, featured collections, traditional recipes, and stories about local makers.
-                        </p>
-
-                        <a
-                            href="file:///C:/Users/DELL/Documents/KERALA%20ROOTS/basics/index.html"
-                        >
-                            VIEW MY WORK →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- =================================
-                     ADD YOUR FUTURE PROJECT HERE
-
-                     COPY THE PROJECT CARD ABOVE
-                     AND CHANGE:
-                     1. Image
-                     2. Category
-                     3. Project name
-                     4. Description
-                     5. Project page link
-                     ================================= -->
-
-                <!--
-
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="your-new-project-image.jpg"
-                            alt="Your New Project"
-                        >
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            Website · UI/UX Design
-                        </p>
-
-                        <h2>
-                            Your New Project
-                        </h2>
-
-                        <p class="project-description">
-                            Add a short description of your
-                            new project here.
-                        </p>
-
-                        <a
-                            href="your-new-project.html"
-                            class="view-project-btn"
-                        >
-                            VIEW MY WORK →
-                        </a>
-
-                    </div>
-
-                </article>
-
-                -->
-
+                <h1>
+                    Designing Digital
+                    <br>
+                    Experiences That
+                    <br>
+                    <em>Feel Simple.</em>
+                </h1>
+
+                <p class="hero-description">
+                    I create clean, intuitive and visually engaging
+                    digital experiences that make products easier
+                    and more enjoyable to use.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="projects.html" class="btn primary-btn">
+                        View My Projects
+                    </a>
+
+                    <a href="JAYALAKSHMI JAYAKUMAR (CV).pdf" class="btn secondary-btn">
+                        Download CV
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <!-- FUTURE PROJECT NOTE -->
+            <div class="hero-image">
 
-            <p class="add-project-note">
-                More projects will be added as I continue
-                developing my UI/UX design skills.
-            </p>
+                <div class="hero-blob"></div>
 
+               
 
-            <!-- BACK TO HOME -->
+                <span class="floating-card card-one">
+                    UI/UX
+                </span>
 
-            <a
-                href="index.html#home"
-                class="back-home"
-            >
-                ← Back to Home
-            </a>
+                <span class="floating-card card-two">
+                    Figma
+                </span>
 
+                <span class="floating-card card-three">
+                    Creative
+                </span>
+
+            </div>
 
         </section>
 
-    </main>
+
+        <!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="section-title">
+
+        <span class="pill">
+            ABOUT ME
+        </span>
+
+        <h2>
+            Turning ideas into
+            <span>simple experiences.</span>
+        </h2>
+
+    </div>
 
 
-    <!-- Your existing JavaScript -->
+    <div class="about-content">
+
+        <!-- LEFT: ABOUT TEXT -->
+
+        <div class="about-text">
+
+            <p>
+                I’m Jayalakshmi, a BCA graduate and aspiring UI/UX Designer
+                with a passion for creating simple, intuitive, and visually
+                engaging digital experiences.
+            </p>
+
+            <p>
+                I enjoy exploring ideas, designing user-friendly interfaces,
+                and paying attention to details such as layout, typography,
+                color, and usability.
+            </p>
+
+            <p>
+                I’m currently building my UI/UX skills through hands-on
+                projects, including a Family Digital Document Wallet and
+                JArtistry. I’m eager to begin my career in UI/UX design,
+                learn from real-world experiences, and grow as a designer.
+            </p>
+
+        </div>
+
+
+        <!-- RIGHT: ABOUT IMAGE -->
+
+        <div class="about-image">
+
+            <img
+                src="profilepic.jpeg"
+                alt="About Jayalakshmi"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+<section class="services section" id="services">
+
+    <div class="section-title center">
+
+        <span class="pill">
+            MY SERVICES
+        </span>
+
+        <h2>
+            What I can
+            <span>create.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="service-container">
+
+        <!-- UI/UX DESIGN -->
+        <div class="service-card">
+
+            <div class="service-icon">
+                <span>UI</span>
+            </div>
+
+            <h3>
+                UI/UX Design
+            </h3>
+
+            <p>
+                User flows, wireframes and intuitive
+                interface design.
+            </p>
+
+        </div>
+
+
+        <!-- WEB DESIGN -->
+        <div class="service-card">
+
+            <div class="service-icon">
+                <span>WD</span>
+            </div>
+
+            <h3>
+                Web Design
+            </h3>
+
+            <p>
+                Modern, responsive and visually engaging
+                website designs.
+            </p>
+
+        </div>
+
+
+        <!-- PROTOTYPING -->
+        <div class="service-card">
+
+            <div class="service-icon">
+                <span>PT</span>
+            </div>
+
+            <h3>
+                Prototyping
+            </h3>
+
+            <p>
+                Interactive prototypes that communicate
+                product ideas clearly.
+            </p>
+
+        </div>
+
+
+        <!-- VISUAL DESIGN -->
+        <div class="service-card">
+
+            <div class="service-icon">
+                <span>VD</span>
+            </div>
+
+            <h3>
+                Visual Design
+            </h3>
+
+            <p>
+                Posters, layouts, typography and
+                visual communication.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= TOOLS ================= -->
+
+        <section class="tools">
+
+            <div class="section-title center">
+
+                <span class="pill">
+                    MY TOOLS
+                </span>
+
+            </div>
+
+            <div class="tools-list">
+
+                <span>Figma</span>
+
+                <span>Adobe Photoshop</span>
+
+                <span>Adobe Illustrator</span>
+
+                <span>HTML</span>
+
+                <span>CSS</span>
+
+            </div>
+
+        </section>
+       <!-- ================= PROJECTS ================= -->
+
+<section class="project section" id="projects">
+
+    <div class="section-title center">
+        <span class="pill">MY PROJECTS</span>
+        <!-- <h2> <span>My</span>  Projects </h2> -->
+    </div>
+
+    <div class="project-introduction">
+
+        <div class="project-description">
+
+            <p class="project-category">
+                Mobile App • UI/UX Case Study
+            </p>
+
+            <h3>
+                Family Digital Document Wallet
+                <span>(Website)</span>
+            </h3>
+
+            <p>
+                Family Digital Document Wallet is an ongoing mobile app
+                concept designed to help families store, organize, and
+                manage important digital documents in one secure place.
+                Users can manage documents for different family members,
+                organize them by categories, view document details, and
+                receive expiry reminders for important documents.
+                The design focuses on making document management simple,
+                organized, and easy to access.
+            </p>
+
+            <div class="tags">
+                <span>Research</span>
+                <span>Wireframe</span>
+                <span>UI Design</span>
+                <span>Prototype</span>
+            </div>
+
+            <!-- View Project Button -->
+            <div class="project-action">
+                <a href="https://www.figma.com/proto/FunWPjvxJm2hHNM49Aekcq/Family-Document-Wallet---Jayalakshmi-Jayakumar?page-id=0%3A1&node-id=12-134&p=f&viewport=-4976%2C-52%2C0.77&t=eHXL3Me25Aaj4qq1-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=121%3A1160"
+                   target="_blank"
+                   class="view-project-btn">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Your Dashboard, Documents, Family Members,
+         Reminder and Profile sections continue here -->
+
+</section>
+
+<!-- ================= ONBOARDING ================= -->
+
+<article class="case-study" id="family-digital-document-wallet">
+
+    <div class="case-text">
+
+        <h3>
+            Onboarding Screens
+        </h3>
+
+        <p>Designed a simple onboarding experience to introduce users to the Family Digital Document Wallet and highlight its key benefits before they start using the app.
+        </p>
+
+    </div>
+
+
+    <div class="screen-container">
+
+        <!-- Onboarding Screen 1 -->
+        <div class="small-phone">
+
+            <img
+                src="onboarding1.jpeg"
+                alt="Onboarding Screen 1"
+            >
+
+        </div>
+
+
+        <!-- Onboarding Screen 2 -->
+        <div class="small-phone">
+
+            <img
+                src="onboarding2.jpeg"
+                alt="Onboarding Screen 2"
+            >
+
+        </div>
+
+
+        <!-- Onboarding Screen 3 -->
+        <div class="small-phone">
+
+            <img
+                src="onboarding3.jpeg"
+                alt="Onboarding Screen 3"
+            >
+
+        </div>
+
+    </div>
+
+</article>
+
+           <!-- Dashboard -->
+
+<article class="case-study split-section">
+
+    <div class="case-text">
+
+        <p class="number">
+            
+        </p>
+
+        <h3>
+            Dashboard
+        </h3>
+
+        <p>
+          Designed a clear and organized dashboard that gives users a quick overview of their family documents, storage, recent documents, and upcoming expiry reminders, while providing easy access to key features.
+        </p>
+
+    </div>
+
+
+    <div class="mock-phone dashboard">
+
+        <img 
+            src="dashboard.jpeg" 
+            alt="Dashboard Screen"
+        >
+
+    </div>
+
+</article>
+
+  <!-- Documents -->
+
+<article class="case-study split-section reverse">
+
+    <div class="case-text">
+
+        <p class="number">
+            
+        </p>
+
+        <h3>
+            Documents
+        </h3>
+
+        <p>
+            Designed a centralized document management screen that gives users a clear overview of their family documents, making it easy to browse, search, filter, and access documents by category. The organized layout helps users quickly find the document they need while keeping all important documents structured in one place.
+        </p>
+
+    </div>
+
+
+    <div class="mock-phone documents">
+
+        <img src="document.jpeg" alt="Documents Screen">
+
+    </div>
+
+</article>
+
+
+<!-- Family Members -->
+
+<article class="case-study split-section">
+
+    <div class="case-text">
+
+        <p class="number">
+          
+        </p>
+
+        <h3>
+            Family Members
+        </h3>
+
+        <p>
+            Designed a simple family members screen that displays all added family members in an organized list. Each member has a clear selection arrow, allowing users to easily choose a person and access their associated documents.
+        </p>
+
+    </div>
+
+
+    <div class="mock-phone family">
+
+        <img src="family members.jpeg" alt="Family Members Screen">
+
+    </div>
+
+</article>
+
+
+<!-- Reminder -->
+
+<article class="case-study split-section reverse">
+
+    <div class="case-text">
+
+        <p class="number">
+            
+        </p>
+
+        <h3>
+            Reminder
+        </h3>
+
+        <p>
+            Designed a reminder screen that provides a clear overview of document expiry status, with separate sections for Expiring Soon, Upcoming, and Expired documents. Each section displays the total number of documents and includes an arrow for quick access to the respective list.
+        </p>
+
+    </div>
+
+
+    <div class="mock-phone reminder">
+
+        <img src="reminder.jpeg" alt="Reminder Screen">
+
+    </div>
+
+</article>
+
+
+<!-- Profile -->
+
+<article class="case-study split-section">
+
+    <div class="case-text">
+
+        <p class="number">
+           
+        </p>
+
+        <h3>
+            Profile
+        </h3>
+
+        <p>
+            Designed a simple profile screen that gives users easy access to their account information and important app settings, including family members, PIN/password, fingerprint, and AppLock security options. The organized layout keeps personal and security settings easy to find and manage.
+        </p>
+
+    </div>
+
+
+    <div class="mock-phone profile">
+
+        <img src="profile.jpeg" alt="Profile Screen">
+
+    </div>
+
+</article>
+
+
+      <!-- ================= JARTISTRY ================= -->
+
+<section class="website-project section" id="jartistry-project">
+
+    <div class="section-title center">
+
+        <span class="pill">
+            WEB DESIGN
+        </span>
+
+        <h2>
+            JArtistry
+            <span>(Website)</span>
+        </h2>
+
+    </div>
+
+
+    <p class="website-intro">
+        JArtistry is an ongoing website project designed for a single artist
+        to showcase and share their artwork with visitors. The website allows
+        users to explore different artworks, engage with the artist’s work
+        through likes and comments, and request customized artworks such as
+        Nettippattam and charcoal drawings. The design focuses on creating a
+        visually engaging experience while making artwork discovery and
+        interaction simple and enjoyable.
+    </p>
+
+
+    <!-- ================= HOME SCREEN ================= -->
+
+    <article class="website-case">
+
+         <h3>
+            Home Screen
+        </h3>
+
+        <p>
+            Designed a simple and clean homepage with clear navigation, a search bar, and essential links. The hero section introduces the artist with a welcoming heading and description, along with an “Explore Artworks” button that guides users to discover the artist’s work.
+        </p>
+
+        <br>
+        
+        <div class="website-screen">
+
+            <img
+                src="homeJartistry.jpeg"
+                alt="JArtistry Home Screen"
+            >
+
+        </div>
+
+       
+
+    </article>
+
+
+    <!-- ================= WHY CHOOSE HANDMADE ARTWORKS ================= -->
+
+    <article class="website-case website-two-column">
+
+        <div class="website-text">
+
+            <h3>
+                Why Choose Handmade Artworks?
+            </h3>
+
+            <p>
+                Handmade artworks bring a unique blend of creativity, craftsmanship, and personal expression. Each piece is thoughtfully created by the artist, making it special, authentic, and different from mass-produced artwork.
+            </p>
+
+        </div>
+
+
+        <div class="website-screen">
+
+            <img
+                src="whychoose.jpeg"
+                alt="Why Choose Handmade Artworks Screen"
+            >
+
+        </div>
+
+    </article>
+
+
+    <!-- ================= EXPLORE ARTWORKS ================= -->
+
+    <article class="website-case">
+
+        <h3>
+            Explore Artworks
+        </h3>
+
+        <p>
+           Designed an Explore Artworks page that showcases different types of artworks through names and reference images. The page also shows customization options specifically for charcoal drawings and Nettippattam, allowing visitors to request personalized versions of these artworks though it.
+        </p>
+
+
+        <div class="website-screen">
+
+            <img
+                src="explore artwork.jpeg"
+                alt="Explore Artworks Screen"
+            >
+
+        </div>
+
+    </article>
+
+</section>
+
+
+   <!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-content">
+
+        <span class="pill">CONTACT</span>
+
+        <h2>
+            Let's create something
+            <span>meaningful.</span>
+        </h2>
+
+        <p>
+            Open to UI/UX design opportunities,
+            freelance projects and creative collaborations.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jayalakshmitj369@gmail.com"
+            target="_blank"
+            class="contact-item">
+                <span class="contact-icon">✉</span>
+                <span>jayalakshmitj369@gmail.com</span>
+        </a>
+
+        <!-- Phone -->
+        <div class="contact-item">
+            <span class="contact-icon">☎</span>
+            <span>+91 9961587480</span>
+        </div>
+
+        <!-- Location -->
+        <div class="contact-item">
+            <span class="contact-icon">⌖</span>
+            <span>Ernakulam, Kerala, India</span>
+        </div>
+
+
+        <!-- LinkedIn -->
+        <a
+            href="https://www.linkedin.com/in/jayalakshmi-jayakumar-29944a409"
+            target="_blank"
+            class="contact-item"
+        >
+            <span class="contact-icon">in</span>
+            <span>LinkedIn</span>
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © <span id="year"></span>
+        Jayalakshmi Jayakumar
+    </p>
+
+</footer>
+
 
     <script src="script.js"></script>
 
