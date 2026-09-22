@@ -245,6 +245,142 @@
         }
 
 
+
+        /* =========================================
+           MY POSTERS
+           ========================================= */
+
+        .posters-section {
+            max-width: 1150px;
+            margin: 100px auto 0;
+        }
+
+        .posters-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .posters-heading h2 {
+            margin: 0 0 12px;
+            font-size: 36px;
+            line-height: 1.2;
+            color: #222;
+        }
+
+        .posters-heading p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .posters-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .poster-card {
+            border: 0;
+            padding: 0;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .poster-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background: #edf1ee;
+            border: 1px solid #e1e6e2;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .poster-card:hover .poster-image {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 32px rgba(0, 0, 0, 0.11);
+        }
+
+        .poster-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .poster-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #89938d;
+            font-size: 13px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .poster-title {
+            margin: 12px 3px 0;
+            color: #333;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Poster lightbox */
+        .poster-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(20, 25, 22, 0.88);
+        }
+
+        .poster-modal.active {
+            display: flex;
+        }
+
+        .poster-modal-image {
+            max-width: min(90vw, 900px);
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .poster-modal-close {
+            position: absolute;
+            top: 22px;
+            right: 28px;
+            width: 42px;
+            height: 42px;
+            border: 0;
+            border-radius: 50%;
+            background: #fff;
+            color: #333;
+            font-size: 25px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .poster-modal-title {
+            position: absolute;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+        }
+
         /* =========================================
            TABLET
            ========================================= */
@@ -307,6 +443,31 @@
 
             .view-project-btn {
                 width: 100%;
+            }
+
+            .posters-section {
+                margin-top: 75px;
+            }
+
+            .posters-heading h2 {
+                font-size: 29px;
+            }
+
+            .posters-heading p {
+                font-size: 14px;
+            }
+
+            .posters-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+
+            .poster-title {
+                font-size: 13px;
+            }
+
+            .poster-modal {
+                padding: 18px;
             }
 
         }
@@ -577,6 +738,107 @@
             </div>
 
 
+
+            <!-- =========================================
+                 MY POSTERS
+                 ========================================= -->
+
+            <section class="posters-section" id="posters">
+
+                <div class="posters-heading">
+                    <h2>My Posters</h2>
+                    <p>
+                        A collection of my poster designs and creative visual work.
+                        Click any poster to view it separately.
+                    </p>
+                </div>
+
+                <div class="posters-grid">
+
+                  <!-- POSTER 01 -->
+<button class="poster-card" type="button"
+    data-poster="illustrator_poster.png"
+    data-title="Illustrator Poster Practice">
+
+    <div class="poster-image">
+        <img src="illustrator_poster.png"
+             alt="Illustrator Poster Practice">
+    </div>
+
+    <div class="poster-title">
+        Illustrator Poster Practice
+    </div>
+
+</button>
+
+
+<!-- POSTER 02 -->
+<button class="poster-card" type="button"
+    data-poster="Adobe Photoshop Poster.png"
+    data-title="Figma Poster">
+
+    <div class="poster-image">
+        <img src="Adobe Photoshop Poster.png"
+             alt="Figma Poster">
+    </div>
+
+    <div class="poster-title">
+        Figma Poster
+    </div>
+
+</button>
+                    <!-- POSTER 03 -->
+                    <!-- <button class="poster-card" type="button"
+                        data-poster="poster-03.jpg"
+                        data-title="Poster 03">
+                        <div class="poster-image">
+                            <div class="poster-placeholder">
+                                Add Poster Image
+                            </div>
+                        </div>
+                        <div class="poster-title">Poster 03</div>
+                    </button> -->
+
+                    <!-- POSTER 04 -->
+                    <!-- <button class="poster-card" type="button"
+                        data-poster="poster-04.jpg"
+                        data-title="Poster 04">
+                        <div class="poster-image">
+                            <div class="poster-placeholder">
+                                Add Poster Image
+                            </div>
+                        </div>
+                        <div class="poster-title">Poster 04</div>
+                    </button> -->
+
+                    <!--
+                    ADD MORE POSTERS
+
+                    Copy one poster-card, then change the image filename
+                    and title.
+                    -->
+
+                </div>
+
+            </section>
+
+
+            <!-- POSTER VIEWER -->
+
+            <div class="poster-modal" id="posterModal" aria-hidden="true">
+
+                <button class="poster-modal-close" id="posterModalClose"
+                    type="button" aria-label="Close poster">
+                    &times;
+                </button>
+
+                <img class="poster-modal-image" id="posterModalImage"
+                    src="" alt="">
+
+                <div class="poster-modal-title" id="posterModalTitle"></div>
+
+            </div>
+
             <!-- FUTURE PROJECT NOTE -->
 
             <p class="add-project-note">
@@ -599,6 +861,54 @@
 
     </main>
 
+
+
+    <script>
+        /* =========================================
+           POSTER VIEWER
+           ========================================= */
+
+        const posterModal = document.getElementById("posterModal");
+        const posterModalImage = document.getElementById("posterModalImage");
+        const posterModalTitle = document.getElementById("posterModalTitle");
+        const posterModalClose = document.getElementById("posterModalClose");
+
+        document.querySelectorAll(".poster-card").forEach((card) => {
+            card.addEventListener("click", () => {
+                const imagePath = card.dataset.poster;
+                const title = card.dataset.title;
+
+                posterModalImage.src = imagePath;
+                posterModalImage.alt = title;
+                posterModalTitle.textContent = title;
+
+                posterModal.classList.add("active");
+                posterModal.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        function closePoster() {
+            posterModal.classList.remove("active");
+            posterModal.setAttribute("aria-hidden", "true");
+            posterModalImage.src = "";
+            document.body.style.overflow = "";
+        }
+
+        posterModalClose.addEventListener("click", closePoster);
+
+        posterModal.addEventListener("click", (event) => {
+            if (event.target === posterModal) {
+                closePoster();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && posterModal.classList.contains("active")) {
+                closePoster();
+            }
+        });
+    </script>
 
     <!-- Your existing JavaScript -->
 
